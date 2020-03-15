@@ -1,3 +1,9 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +40,24 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(50, (100% / 50));
+  grid-template-rows: repeat(50, (100% / 50));
+  width: 50%;
+
+  > div {
+    cursor: pointer;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    height: (50vw / 50);
+    width: (50vw / 50);
+
+    &.focus {
+      background-color: pink;
+    }
   }
 }
